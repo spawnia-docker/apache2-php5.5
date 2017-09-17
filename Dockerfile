@@ -11,6 +11,7 @@ RUN apk --update add \
                     php5-exif \
                     php5-gd \
                     php5-pdo \
+                    php5-mysql \
                     php5-xml \
                     php5-zip \
                     curl \
