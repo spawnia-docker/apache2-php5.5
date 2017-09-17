@@ -7,7 +7,7 @@ RUN apk --update add \
                     apache2 \
                     php5-apache2 \
                     php5-ctype \
-                    php5-json
+                    php5-json \
                     php5-exif \
                     php5-gd \
                     php5-pdo \
