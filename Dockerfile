@@ -5,7 +5,19 @@ LABEL description="An alpine based container with apache2 and php as an apache m
 
 RUN apk --update add \
                     apache2 \
-                    php5-apache2
+                    php5-apache2 \
+                    php5-ctype \
+                    php5-json
+                    php5-exif \
+                    php5-gd \
+                    php5-pdo \
+                    php5-xml \
+                    php5-zip \
+                    curl \
+                    php5-cli \
+                    php5-phar \
+                    php5-openssl \
+                    php5-zlib
 
 # this is where apache puts its pid file
 RUN mkdir /run/apache2
