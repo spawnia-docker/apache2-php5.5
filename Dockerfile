@@ -7,16 +7,18 @@ RUN apk --update add \
                     apache2 \
                     php5-apache2
 
+# this is where apache puts its pid file
 RUN mkdir /run/apache2
-RUN mkdir /var/www/public
-RUN echo "<?php phpinfo() ?>" > /var/www/public/index.php
+
+RUN mkdir /var/www/htdocs
+RUN echo "<?php phpinfo() ?>" > /var/www/htdocs/index.php
 
 COPY httpd.conf /etc/apache2/httpd.conf
 
 EXPOSE 80
 
-VOLUME ["/var/www"]
+VOLUME ["/var/www/htdocs"]
 
-WORKDIR /var/www
+WORKDIR /var/www/htdocs
 
 CMD ["httpd", "-D", "FOREGROUND"]
