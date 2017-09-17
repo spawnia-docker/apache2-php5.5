@@ -14,6 +14,7 @@ RUN apk --update add \
                     php5-mysql \
                     php5-pdo_mysql \
                     php5-xml \
+                    php5-dom \
                     php5-zip \
                     curl \
                     php5-cli \
