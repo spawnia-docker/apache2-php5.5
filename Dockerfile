@@ -39,8 +39,6 @@ COPY httpd.conf /etc/apache2/httpd.conf
 
 EXPOSE 80
 
-VOLUME ["/var/www/htdocs"]
-
-WORKDIR /var/www/htdocs
+WORKDIR /var/www
 
 CMD ["httpd", "-D", "FOREGROUND"]
