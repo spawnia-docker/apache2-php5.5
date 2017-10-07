@@ -32,8 +32,8 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 # this is where apache puts its pid file
 RUN mkdir /run/apache2
 
-RUN mkdir /var/www/htdocs
-RUN echo "<?php phpinfo() ?>" > /var/www/htdocs/index.php
+RUN mkdir /var/www/public
+RUN echo "<?php phpinfo() ?>" > /var/www/public/index.php
 
 COPY httpd.conf /etc/apache2/httpd.conf
 
