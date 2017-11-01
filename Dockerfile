@@ -34,7 +34,7 @@ RUN mkdir /run/apache2
 
 RUN mkdir /var/www/htdocs
 RUN mkdir /var/www/htdocs/public
-RUN echo "Alles Gute zum Geburtstag :) Hiermit hast du einen Gutschein frei für einmal Linux aufsetzen!" > /var/www/htdocs/public/index.html
+RUN echo "<?php phpinfo() ?>" > /var/www/htdocs/public/index.php
 
 COPY httpd.conf /etc/apache2/httpd.conf
 
